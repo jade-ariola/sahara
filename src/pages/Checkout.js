@@ -6,7 +6,7 @@ import './Checkout.css';
 const Checkout = () => {
     const navigate = useNavigate();
 
-    // For presentation purposes, this is default user information
+    // For presentation purposes, this is the default user information
     const [firstName, setFirstName] = useState('John');
     const [lastName, setLastName] = useState('Doe');
     const [address, setAddress] = useState('123 Main St');

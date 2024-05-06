@@ -93,7 +93,7 @@ const Header = ({ setCategoryFilter }) => {
             </Toolbar>
             <Toolbar>
                 <Tabs
-                // This enclosed section is probably not necessary
+                // This enclosed section is probably not necessary but I'll leave it here.
                     value={-1}
                     onChange={handleChange}
                     className="categoryTabs"

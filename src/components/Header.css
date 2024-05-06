@@ -108,6 +108,9 @@
     color: white;
 }
 
+/*
+    Complete mobile support is not one of my 10 features, but it is something that I will work on in my free time.
+*/
 @media only screen and (max-width: 600px) {
     .saharaLogo,
     .MuiTabs-root,
