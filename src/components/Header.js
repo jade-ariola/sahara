@@ -12,7 +12,6 @@ import './Header.css';
 
 const Header = ({ setCategoryFilter }) => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [value, setValue] = useState(0);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -28,7 +27,6 @@ const Header = ({ setCategoryFilter }) => {
     };
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
         const categories = [
             null, // All options
             'Electronics',
@@ -94,7 +92,14 @@ const Header = ({ setCategoryFilter }) => {
                 </IconButton>
             </Toolbar>
             <Toolbar>
-                <Tabs value={value} onChange={handleChange} className="categoryTabs" variant="scrollable" scrollButtons="auto">
+                <Tabs 
+                  value={-1}  // This value ensures no tab is considered active
+                  onChange={handleChange} 
+                  className="categoryTabs" 
+                  variant="scrollable" 
+                  scrollButtons="auto" 
+                  indicatorColor="transparent" // This keeps the indicator always hidden
+                >
                     <Tab label="All" />
                     <Tab label="Electronics" />
                     <Tab label="Clothing" />
