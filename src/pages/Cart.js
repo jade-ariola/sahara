@@ -101,6 +101,7 @@ const Cart = () => {
                                                     value={item.quantity}
                                                     onChange={(e) => handleQuantityChange(item.id, e.target.value)}
                                                     className="quantityInput"
+                                                    // onMouseDown={(e) => e.preventDefault()}
                                                     onClick={(e) => e.stopPropagation()}
                                                 />
                                                 <Button
