@@ -78,16 +78,6 @@
     color: dimgray !important;
 }
 
-/*
- *  Manually editing a component library.
- */
-
- /*
-.css-1aquho2-MuiTabs-indicator {
-     background-color: white !important; 
-}
-*/
-
 .css-2ulfj5-MuiTypography-root {
     margin: 0;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -118,7 +108,7 @@
     color: white;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     .saharaLogo,
     .MuiTabs-root,
     .button {

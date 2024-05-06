@@ -93,12 +93,15 @@ const Header = ({ setCategoryFilter }) => {
             </Toolbar>
             <Toolbar>
                 <Tabs
-                    value={-1}  // This value ensures no tab is considered active
+                // This enclosed section is probably not necessary
+                    value={-1}
                     onChange={handleChange}
                     className="categoryTabs"
                     variant="scrollable"
                     scrollButtons="auto"
-                    indicatorColor="transparent" // This keeps the indicator always hidden
+                    indicatorColor="transparent"
+
+                //
                     sx={{
                         '.css-1aquho2-MuiTabs-indicator': {
                             backgroundColor: 'white'

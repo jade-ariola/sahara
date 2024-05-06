@@ -67,11 +67,13 @@ const About = () => {
                 <div style={{ padding: '20px' }}>
                     <Typography variant="h4">About the Site</Typography>
                     <Typography variant="body1">
-                        This website is a simulated e-commerce platform created for demonstration purposes only. It is a basic representation with rudimentary functions and is not intended for actual commercial transactions.
-                        <br /><br />
-                        Please note that the products listed on this website are for demonstration purposes only and are not available for sale. Any prices, descriptions, or images associated with the products are purely fictional and do not reflect real inventory.
-                        <br /><br />
-                        This site is solely intended to showcase the developer's skills and provide a glimpse of what can be achieved with web development technologies. It does not aim to fully represent a comprehensive e-commerce site.
+                    This website serves as a simulated e-commerce platform designed for demonstration purposes exclusively.
+                    It offers a basic representation with limited functionalities and is not suitable for actual commercial transactions.
+                    Please be aware that the products showcased on this website are purely for demonstration and are not available for purchase.
+                    Any prices, descriptions, or images associated with the products are fictional and do not represent real inventory.
+                    Additionally, please note that mobile view is not fully supported.
+                    This site is intended solely to showcase the developer's skills and provide insight into what can be accomplished with web development technologies.
+                    It does not aim to fully emulate a comprehensive e-commerce site.
                     </Typography>
                 </div>
             </Grid>

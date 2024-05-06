@@ -25,14 +25,20 @@ const Saved = () => {
     const handleAddToCart = (product, e) => {
         e.stopPropagation();
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-        const isProductInCart = cartItems.some(item => item.id === product.id);
-        if (!isProductInCart) {
-            cartItems.push({ ...product, quantity: 1 });
-            localStorage.setItem('cart', JSON.stringify(cartItems));
+        const existingItemIndex = cartItems.findIndex(item => item.id === product.id);
+        const quantityToAdd = product.quantity;
+
+        if (existingItemIndex !== -1) {
+            const updatedCartItems = [...cartItems];
+            updatedCartItems[existingItemIndex].quantity += quantityToAdd;
+            localStorage.setItem('cart', JSON.stringify(updatedCartItems));
             handleRemoveFromSaved(product.id, e);
             setNotificationMessage(`Added ${product.name} to cart!`);
         } else {
-            setNotificationMessage('This product is already in your cart!');
+            const updatedCartItems = [...cartItems, { ...product, quantity: quantityToAdd }];
+            localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+            handleRemoveFromSaved(product.id, e);
+            setNotificationMessage(`Added ${product.name} to cart!`);
         }
     };
 
@@ -72,7 +78,7 @@ const Saved = () => {
                                                 precision={0.5}
                                                 readOnly
                                             />
-                                            <Typography ml={1}>({item.rating.toFixed(1)})</Typography>
+                                            <Typography ml={1}>{item.rating.toFixed(1)}</Typography>
                                         </Box>
                                         <Typography variant="h8">
                                             ${item.price}
