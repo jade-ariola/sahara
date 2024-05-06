@@ -1,0 +1,54 @@
+.removeButton {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 10px !important;
+}
+
+.removeButton:hover {
+    background-color: darkred;
+}
+
+.cart-header {
+    color: blue !important;
+}
+
+.cartTitle {
+    margin-left: 20px;
+    color: black;
+    font-size: 32px;
+}
+
+.cartTotal {
+    margin-top: -20px !important;
+    margin-left: 20px !important;
+    font-size: 24px !important;
+}
+
+.checkoutButton {
+    margin-left: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+.gridContainer {
+    margin-top: 10px !important;
+    margin-left: -10px !important;
+}
+
+.cart-removeButton {
+    font-size: 10px !important;
+    margin-left: 60px !important;
+}
+
+.saveButton {
+    font-size: 10px !important;
+    margin-left: 10px !important;
+}
+
+.quantityInput {
+    width: 50px;
+    margin-left: 5px;
+}

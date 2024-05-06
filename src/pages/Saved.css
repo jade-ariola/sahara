@@ -1,0 +1,46 @@
+.savedTitle {
+    margin-left: 20px;
+    font-size: 32px;
+}
+
+.savedMessage {
+    margin-left: 25px !important;
+}
+
+.gridContainer {
+    margin-top: -30px !important;
+    padding-right: 50px !important;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.ratingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.ratingDetails {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantityInput {
+    width: 60px;
+    margin-left: 5px;
+}
+
+.removeButton {
+    margin-left: 30px !important;
+    margin-right: 10px !important;
+    font-size: 13px !important;
+}
+
+.cartButton {
+    box-shadow: none !important;
+}

@@ -1,0 +1,47 @@
+.orders-container .orders-header {
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.orders-container .order-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.orders-container .productCard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.orders-container .productCard img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.orders-container .orderDetails {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.orders-container .payment-info {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.orders-container .payment-info .body1 {
+  margin-top: 5px;
+}

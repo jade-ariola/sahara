@@ -1,0 +1,11 @@
+.searchTitle {
+    font-size: 32px;
+    color: #333;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.noResults {
+    margin-top: 20px !important;
+    margin-left: 20px !important;
+}
