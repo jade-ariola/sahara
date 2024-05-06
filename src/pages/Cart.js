@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardActionArea, CardMedia, CardContent, Grid, Typography, Rating, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Notification from '../components/Notification';
 import './Cart.css';
 import '../components/Product.css';
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
+    const [notificationMessage, setNotificationMessage] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,12 +26,12 @@ const Cart = () => {
         e.stopPropagation();
         const existingSavedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
         if (existingSavedItems.some(item => item.id === product.id)) {
-            alert(`This product is already in your saved items!`);
+            setNotificationMessage(`This product is already in your saved items!`);
             return;
         }
         const updatedSavedItems = [...existingSavedItems, product];
         localStorage.setItem('savedItems', JSON.stringify(updatedSavedItems));
-        alert(`Saved ${product.name} to your list!`);
+        setNotificationMessage(`Saved ${product.name} to your list!`);
         handleRemoveFromCart(product.id, e);
     };
 
@@ -127,6 +129,7 @@ const Cart = () => {
             ) : (
                 <Typography style={{ marginLeft: '20px' }}>Your cart is empty.</Typography>
             )}
+            {notificationMessage && <Notification message={notificationMessage} onClose={() => setNotificationMessage('')} />}
         </div>
     );
 };

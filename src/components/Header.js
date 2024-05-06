@@ -92,13 +92,18 @@ const Header = ({ setCategoryFilter }) => {
                 </IconButton>
             </Toolbar>
             <Toolbar>
-                <Tabs 
-                  value={-1}  // This value ensures no tab is considered active
-                  onChange={handleChange} 
-                  className="categoryTabs" 
-                  variant="scrollable" 
-                  scrollButtons="auto" 
-                  indicatorColor="transparent" // This keeps the indicator always hidden
+                <Tabs
+                    value={-1}  // This value ensures no tab is considered active
+                    onChange={handleChange}
+                    className="categoryTabs"
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    indicatorColor="transparent" // This keeps the indicator always hidden
+                    sx={{
+                        '.css-1aquho2-MuiTabs-indicator': {
+                            backgroundColor: 'white'
+                        }
+                    }}
                 >
                     <Tab label="All" />
                     <Tab label="Electronics" />
@@ -110,6 +115,7 @@ const Header = ({ setCategoryFilter }) => {
                     <Tab label="Toys & Games" />
                 </Tabs>
             </Toolbar>
+
         </AppBar>
     );
 };

@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardMedia, Typography, Grid, Button, Box, Rating } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import Notification from '../components/Notification';
 import './Saved.css';
 import '../components/Product.css';
 
 const Saved = () => {
     const [savedItems, setSavedItems] = useState([]);
+    const [notificationMessage, setNotificationMessage] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,10 +29,10 @@ const Saved = () => {
         if (!isProductInCart) {
             cartItems.push({ ...product, quantity: 1 });
             localStorage.setItem('cart', JSON.stringify(cartItems));
-            handleRemoveFromSaved(product.id, e); // Passing 'e' to the remove function
-            alert(`Added ${product.name} to cart!`);
+            handleRemoveFromSaved(product.id, e);
+            setNotificationMessage(`Added ${product.name} to cart!`);
         } else {
-            alert('This product is already in your cart!');
+            setNotificationMessage('This product is already in your cart!');
         }
     };
 
@@ -90,7 +92,7 @@ const Saved = () => {
                                             Remove
                                         </Button>
                                         <Button
-                                            onClick={(e) => handleAddToCart(item, e)} // Ensure 'e' is passed here
+                                            onClick={(e) => handleAddToCart(item, e)}
                                             color="primary"
                                             variant="contained"
                                             className="cartButton">
@@ -103,6 +105,7 @@ const Saved = () => {
                     ))}
                 </Grid>
             )}
+            {notificationMessage && <Notification message={notificationMessage} onClose={() => setNotificationMessage('')} />}
         </div>
     );
 };
