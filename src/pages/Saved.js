@@ -14,7 +14,7 @@ const Saved = () => {
     }, []);
 
     const handleRemoveFromSaved = (id, e) => {
-        e.stopPropagation(); // Prevents click event propagation so that clicking on this button doesn't trigger ProducDetails
+        e.stopPropagation();
         const updatedSavedItems = savedItems.filter(item => item.id !== id);
         localStorage.setItem('savedItems', JSON.stringify(updatedSavedItems));
         setSavedItems(updatedSavedItems);
@@ -27,7 +27,7 @@ const Saved = () => {
         if (!isProductInCart) {
             cartItems.push({ ...product, quantity: 1 });
             localStorage.setItem('cart', JSON.stringify(cartItems));
-            handleRemoveFromSaved(product.id);
+            handleRemoveFromSaved(product.id, e); // Passing 'e' to the remove function
             alert(`Added ${product.name} to cart!`);
         } else {
             alert('This product is already in your cart!');
@@ -90,7 +90,7 @@ const Saved = () => {
                                             Remove
                                         </Button>
                                         <Button
-                                            onClick={(e) => handleAddToCart(item, e)}
+                                            onClick={(e) => handleAddToCart(item, e)} // Ensure 'e' is passed here
                                             color="primary"
                                             variant="contained"
                                             className="cartButton">
