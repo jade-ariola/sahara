@@ -75,16 +75,13 @@ const ProductDetails = () => {
                     <Box display="flex" alignItems="center" mt={2}>
                         <Rating value={product.rating} precision={0.5} readOnly />
                         <Typography ml={1}>({product.rating.toFixed(1)})</Typography>
+                        <Box flexGrow={1} textAlign="right">
+                            <Typography variant="h6">${product.price}</Typography>
+                        </Box>
                     </Box>
                     <Box display="flex" justifyContent="space-between" alignItems="center" mt={2}>
-                        <Typography variant="h6">${product.price}</Typography>
                         <Box display="flex" alignItems="center">
-                            <Button variant="outlined" color="primary" onClick={handleSaveToList} sx={{ marginRight: 1 }}>
-                                Save to List
-                            </Button>
-                            <Button variant="contained" color="primary" onClick={handleAddToCart}>
-                                Add to Cart
-                            </Button>
+                            <Typography variant="body2"></Typography>
                             <TextField
                                 type="number"
                                 label="Qty"
@@ -109,6 +106,14 @@ const ProductDetails = () => {
                                     }
                                 }}
                             />
+                        </Box>
+                        <Box display="flex" alignItems="center">
+                            <Button variant="outlined" color="primary" onClick={handleSaveToList} sx={{ marginRight: 1 }}>
+                                Save to List
+                            </Button>
+                            <Button variant="contained" color="primary" onClick={handleAddToCart}>
+                                Add to Cart
+                            </Button>
                         </Box>
                     </Box>
                 </CardContent>
