@@ -71,7 +71,7 @@ const About = () => {
                     It offers a basic representation with limited functionalities and is not suitable for actual commercial transactions.
                     Please be aware that the products showcased on this website are purely for demonstration and are not available for purchase.
                     Any prices, descriptions, or images associated with the products are fictional and do not represent real inventory.
-                    Additionally, please note that mobile view is not fully supported.
+                    Additionally, please note that certain screen sizes, particularly mobile sizes, are not yet fully supported.
                     This site is intended solely to showcase the developer's skills and provide insight into what can be accomplished with web development technologies.
                     It does not aim to fully emulate a comprehensive e-commerce site.
                     </Typography>
